@@ -9,14 +9,14 @@ function createCardImage(pokemon) {
 	imgCardEl.setAttribute("width", "256");
 	imgCardEl.setAttribute("class", "card--img");
 	imgCardEl.src = pokemon.sprites.other["official-artwork"].front_default;
-	let i = 1;
+	let picture = 1;
 	setInterval(function () {
-		if (i === 1) {
-			imgCardEl.src = pokemon.sprites.other["official-artwork"].front_default;
-			i++;
-		} else {
+		if (picture === 1) {
 			imgCardEl.src = pokemon.sprites.other.dream_world.front_default;
-			i--;
+			picture++;
+		} else {
+			imgCardEl.src = pokemon.sprites.other["official-artwork"].front_default;
+			picture--;
 		}
 	}, 1000);
 	return imgCardEl;
