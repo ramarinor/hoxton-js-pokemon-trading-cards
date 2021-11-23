@@ -64,7 +64,6 @@ function createCardTextGames(pokemon) {
 function createCard(pokemon) {
 	const liCardEl = document.createElement("li");
 	liCardEl.setAttribute("class", "card");
-	liCardEl.style.listStyle = "none";
 	liCardEl.append(createCardTitle(pokemon));
 	liCardEl.append(createCardImage(pokemon));
 	liCardEl.append(createCardText(pokemon));
@@ -73,7 +72,7 @@ function createCard(pokemon) {
 }
 
 const ulCardsEl = document.querySelector(".cards");
-
+ulCardsEl.style.listStyle = " none";
 for (const pokemon of data) {
 	createCard(pokemon);
 }
