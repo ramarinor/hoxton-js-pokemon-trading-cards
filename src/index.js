@@ -66,8 +66,6 @@ function createCard(pokemon) {
 
 const ulCardsEl = document.querySelector(".cards");
 
-const pokemon = window.data[0];
-
 for (const pokemon of data) {
 	createCard(pokemon);
 }
