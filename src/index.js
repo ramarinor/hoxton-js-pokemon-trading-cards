@@ -9,6 +9,8 @@ function createCardImage(pokemon) {
 	imgCardEl.setAttribute("width", "256");
 	imgCardEl.setAttribute("class", "card--img");
 	imgCardEl.src = pokemon.sprites.other["official-artwork"].front_default;
+
+	//code for toggling the picture;
 	let picture = 1;
 	setInterval(function () {
 		if (picture === 1) {
@@ -19,6 +21,7 @@ function createCardImage(pokemon) {
 			picture--;
 		}
 	}, 1000);
+
 	return imgCardEl;
 }
 
