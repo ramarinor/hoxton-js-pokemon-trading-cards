@@ -64,10 +64,7 @@ function createCardTextGames(pokemon) {
 function createCard(pokemon) {
 	const liCardEl = document.createElement("li");
 	liCardEl.setAttribute("class", "card");
-	liCardEl.append(createCardTitle(pokemon));
-	liCardEl.append(createCardImage(pokemon));
-	liCardEl.append(createCardText(pokemon));
-	liCardEl.append(createCardTextGames(pokemon));
+	liCardEl.append(createCardTitle(pokemon), createCardImage(pokemon), createCardText(pokemon), createCardTextGames(pokemon));
 	ulCardsEl.append(liCardEl);
 }
 
