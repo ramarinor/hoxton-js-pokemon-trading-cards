@@ -15,6 +15,7 @@ function createCardImage(pokemon) {
 function createCardText(pokemon) {
 	const ulCardEl = document.createElement("ul");
 	ulCardEl.setAttribute("class", "card--text");
+	ulCardEl.style.listStyle = "none";
 
 	const statsArray = ["HP", "ATTACK", "DEFENSE", "SPECIAL-ATTACK", "SPECIAL-DEFENSE", "SPEED"];
 
@@ -31,6 +32,7 @@ function createCardText(pokemon) {
 function createCard(pokemon) {
 	const liCardEl = document.createElement("li");
 	liCardEl.setAttribute("class", "card");
+	liCardEl.style.listStyle = "none";
 	liCardEl.append(createCardTitle(pokemon));
 	liCardEl.append(createCardImage(pokemon));
 	liCardEl.append(createCardText(pokemon));
