@@ -40,11 +40,6 @@ function createCardText(pokemon) {
 }
 
 function createCardTextGames(pokemon) {
-	// const pCardInfo = document.createElement("p");
-
-	// });
-	// pCardInfo.innerText = "Appeared in " + gamesAppeared;
-
 	const ulCardEl = document.createElement("ul");
 	ulCardEl.setAttribute("class", "card--text");
 	ulCardEl.style.listStyle = "none";
