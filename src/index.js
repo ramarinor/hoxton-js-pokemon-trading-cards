@@ -29,6 +29,30 @@ function createCardText(pokemon) {
 	return ulCardEl;
 }
 
+function createCardTextGames(pokemon) {
+	// const pCardInfo = document.createElement("p");
+
+	// });
+	// pCardInfo.innerText = "Appeared in " + gamesAppeared;
+
+	const ulCardEl = document.createElement("ul");
+	ulCardEl.setAttribute("class", "card--text");
+	ulCardEl.style.listStyle = "none";
+	ulCardEl.innerText = "Appeared in:";
+
+	const gamesAppeared = pokemon.game_indices.map(function (game) {
+		return game.version.name;
+	});
+	for (const game of gamesAppeared) {
+		const liEl = document.createElement("li");
+		liEl.style.display = "inline-block";
+		liEl.style.margin = "0.2rem ";
+		liEl.innerText = `${game}`;
+		ulCardEl.append(liEl);
+	}
+	return ulCardEl;
+}
+
 function createCard(pokemon) {
 	const liCardEl = document.createElement("li");
 	liCardEl.setAttribute("class", "card");
@@ -36,13 +60,14 @@ function createCard(pokemon) {
 	liCardEl.append(createCardTitle(pokemon));
 	liCardEl.append(createCardImage(pokemon));
 	liCardEl.append(createCardText(pokemon));
+	liCardEl.append(createCardTextGames(pokemon));
 	ulCardsEl.append(liCardEl);
 }
 
 const ulCardsEl = document.querySelector(".cards");
 
 const pokemon = window.data[0];
-console.log(pokemon);
+
 for (const pokemon of data) {
 	createCard(pokemon);
 }
